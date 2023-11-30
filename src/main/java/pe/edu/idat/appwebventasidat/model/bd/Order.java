@@ -33,4 +33,10 @@ public class Order {
     private String shippostalcode;
     @Column(name = "shipcountry")
     private String shipcountry;
+    @ManyToOne
+    @JoinColumn(name = "customerid")
+    private Customer customer;
+    @ManyToOne
+    @JoinColumn(name = "employeeid")
+    private Employee employee;
 }

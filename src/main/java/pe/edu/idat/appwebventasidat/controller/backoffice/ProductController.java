@@ -17,8 +17,8 @@ import java.util.List;
 public class ProductController {
     private ProductService productService;
     @GetMapping("")
-    public String frmMAntProducto(Model model){
-        model.addAttribute("listaprodcutos",productService.listarProductos());
+    public String frmMantProducto(Model model){
+        model.addAttribute("listaproductos",productService.listarProductos());
         return "backoffice/product/frmproduct";
     }
     @GetMapping("/listar")
