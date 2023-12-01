@@ -24,7 +24,7 @@ public class SecurityConfig {
                                 auth.requestMatchers("/auth/login",
                                         "/auth/registrar",
                                         "/auth/guardarusuario",
-                                        "resourcers/**",
+                                        "resources/**",
                                         "/static/**",
                                         "/styles/**",
                                         "/script/**").permitAll()
