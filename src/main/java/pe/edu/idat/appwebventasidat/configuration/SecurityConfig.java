@@ -18,7 +18,9 @@ public class SecurityConfig {
     private final DetalleUsuarioService detalleUsuarioService;
     @Bean
     public SecurityFilterChain config(HttpSecurity httpSecurity) throws Exception{
-        httpSecurity
+        httpSecurity.csrf(
+                csrf -> csrf.disable()
+                )
                 .authorizeHttpRequests(
                         auth ->
                                 auth.requestMatchers("/auth/login",

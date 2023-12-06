@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "customers")
 public class Customer {
     @Id
-    private Integer customerid;
+    private String customerid;
     @Column(name = "companyname")
     private String companyname;
     @Column(name = "contactname")

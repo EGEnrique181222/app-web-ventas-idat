@@ -1,11 +1,9 @@
 package pe.edu.idat.appwebventasidat.model.bd;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import pe.edu.idat.appwebventasidat.model.bd.pk.OrderDetailId;
 
 @NoArgsConstructor
 
@@ -13,8 +11,8 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "orderdetails")
 public class OrderDetail {
-    @Id
-    private Integer orderid;
+    @EmbeddedId
+    private OrderDetailId orderDetailId;
     @Column(name = "unitprice")
     private Double unitprice;
     @Column(name = "quantity")
